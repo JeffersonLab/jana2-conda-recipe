@@ -1,0 +1,37 @@
+package:
+  name: jana2
+  version: "2.0.3"  # adjust the version accordingly
+
+source:
+  url: https://github.com/JeffersonLab/JANA2/archive/refs/tags/v2.0.3.tar.gz  # adjust the version tag
+  sha256: <SHA256_HASH>  # you need to calculate this for the tar.gz file
+
+build:
+  #number: 0
+  #skip: True  # [not win] If you do not support Windows
+  skip: True  # [win or osx]
+
+requirements:
+  build:
+    - cmake
+    - make  # [unix]
+    - {{ compiler('cxx') }}
+  host:
+    - {{ compiler('cxx') }}
+  run:
+
+test:
+  commands:
+    - command -v jana  # replace 'jana' with an actual binary name if different
+
+about:
+  home: https://github.com/JeffersonLab/JANA2
+  license: MIT  # specify the correct license
+  license_file: LICENSE
+  summary: "Description of JANA2"
+  doc_url: <optional>
+  dev_url: <optional>
+
+extra:
+  recipe-maintainers:
+    - your_github_username  # add conda-forge maintainers later
