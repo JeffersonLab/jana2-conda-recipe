@@ -1,6 +1,6 @@
 package:
   name: jana2
-  version: "2.2.1.rc1.p1"  # JANA 2.2.1.rc1, p1 - packaging versino 1
+  version: "2.2.1.rc1.p3"  # JANA 2.2.1.rc1, p3 - packaging version 3
 
 source:
   url: https://github.com/JeffersonLab/JANA2/archive/refs/tags/v2.2.1-rc1.tar.gz  # adjust the version tag
@@ -14,11 +14,15 @@ build:
 requirements:
   build:
     - cmake
+    - python
     - make  # [unix]
     - {{ compiler('cxx') }}
   host:
     - {{ compiler('cxx') }}
   run:
+    - root
+    - python
+
 
 test:
   commands:
@@ -29,8 +33,12 @@ about:
   license: MIT  # specify the correct license
   license_file: LICENSE
   summary: "Modular reconstruction framework for NP and HEP experiments"
-  doc_url: <optional>
-  dev_url: <optional>
+  description: |
+    JANA is a C++ framework for multi-threaded HENP (High Energy and Nuclear Physics) event reconstruction. 
+    It is very efficient at multi-threading with a design that makes it easy for less experienced programmers 
+    to contribute pieces to the larger reconstruction project. The same JANA program can be used to easily do 
+    partial or full reconstruction, fully maximizing the available cores for the current job.
+  documentation: https://jeffersonlab.github.io/JANA2/
 
 extra:
   recipe-maintainers:
