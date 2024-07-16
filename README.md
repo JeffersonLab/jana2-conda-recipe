@@ -14,28 +14,40 @@ conda install -c npdev jana2
 conda config --prepend channels npdev
 ```
 
-# Uploading conda packages
+## Conda cheat sheet
 
-- https://docs.anaconda.com/anacondaorg/user-guide/packages/conda-packages/
 
-- https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html
+- [101 conda packages and channels](https://docs.anaconda.com/anacondaorg/user-guide/packages/conda-packages/)
+
+- [Building conda packages from scratch](https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html)
 
 - [meta.yaml specification](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html)
 
 - [Build environment variables](https://docs.conda.io/projects/conda-build/en/latest/user-guide/environment-variables.html#env-vars)
 
-Disable automatic upload
+<br> 
+
+# Building JANA2
+
+
+### Automatic upload
+
+It is good idea to switch off automatic upload for `conda build` during recepie development time
 
 ```bash
 conda config --set anaconda_upload no
 ```
 
+### Build jana2
+
 Build
 
 ```bash
 
-
+# To build
 conda build .
+
+# To see where the resulting file is located (e.g. for manual upload)
 conda build . --output
 
 ```
