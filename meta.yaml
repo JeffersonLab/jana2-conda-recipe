@@ -1,10 +1,10 @@
 package:
   name: jana2
-  version: "2.0.3"  # adjust the version accordingly
+  version: "2.2.1.rc1.p1"  # JANA 2.2.1.rc1, p1 - packaging versino 1
 
 source:
-  url: https://github.com/JeffersonLab/JANA2/archive/refs/tags/v2.0.3.tar.gz  # adjust the version tag
-  sha256: <SHA256_HASH>  # you need to calculate this for the tar.gz file
+  url: https://github.com/JeffersonLab/JANA2/archive/refs/tags/v2.2.1-rc1.tar.gz  # adjust the version tag
+  sha256: 7b65ce967d9c0690e22f4450733ead4acebf8fa510f792e0e4a6def14fb739b1  # you need to calculate this for the tar.gz file
 
 build:
   #number: 0
@@ -28,10 +28,10 @@ about:
   home: https://github.com/JeffersonLab/JANA2
   license: MIT  # specify the correct license
   license_file: LICENSE
-  summary: "Description of JANA2"
+  summary: "Modular reconstruction framework for NP and HEP experiments"
   doc_url: <optional>
   dev_url: <optional>
 
 extra:
   recipe-maintainers:
-    - your_github_username  # add conda-forge maintainers later
+    - DraTeots  # add conda-forge maintainers later
